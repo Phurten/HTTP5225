@@ -1,0 +1,531 @@
+/* defining custom color */
+:root { 
+    --bs-font-sans-serif: 'Ubuntu', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', sans-serif;
+    --tennis-blue: #87CEEB;
+    --tennis-green: #228B22;
+    --tennis-light-green: #90EE90;
+    --tennis-dark-blue: #4682B4;
+    --tennis-accent: #FFD700;
+}
+
+/* creating hero banner with background image and overlay */
+.hero-banner {
+    background: linear-gradient(rgba(135, 206, 235, 0.1), rgba(34, 139, 34, 0.2)), 
+                url('../images/tennis-unsplash.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    font-weight: 400;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero-search {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50px;
+    padding: 8px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.search-input {
+    border: none;
+    background: transparent;
+    font-size: 1.1rem;
+    padding: 12px 20px;
+    color: var(--tennis-green);
+    font-weight: 500;
+}
+
+.search-input:focus {
+    box-shadow: none;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.search-input::placeholder {
+    color: var(--tennis-dark-blue);
+    opacity: 0.7;
+}
+
+.search-icon {
+    background: transparent;
+    border: none;
+    color: var(--tennis-green);
+    font-size: 1.2rem;
+    padding-left: 20px;
+}
+
+.btn-search {
+    background: linear-gradient(135deg, var(--tennis-green), var(--tennis-dark-blue));
+    border: none;
+    color: white;
+    font-weight: 600;
+    padding: 12px 25px;
+    border-radius: 40px;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+
+.btn-search:hover {
+    background: linear-gradient(135deg, var(--tennis-dark-blue), var(--tennis-green));
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(34, 139, 34, 0.4);
+    color: white;
+}
+
+.input-group {
+    border-radius: 50px;
+}
+
+.card { 
+    border-radius: .75rem; 
+    overflow: hidden; 
+    transition: border-color .15s ease, transform .15s ease, box-shadow .15s ease;
+    height: 100%;
+    border: 2px solid var(--tennis-blue);
+}
+
+/* Adding hover effects to make cards interactive */
+.card:hover { 
+    border-color: var(--tennis-green) !important;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(34, 139, 34, 0.2);
+}
+
+.card .card-body { 
+    display: flex; 
+    flex-direction: column; 
+    gap: .5rem; 
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.05), rgba(34, 139, 34, 0.05));
+}
+
+.text-primary {
+    color: var(--tennis-dark-blue) !important;
+}
+
+.text-success {
+    color: var(--tennis-green) !important;
+}
+
+.text-info {
+    color: var(--tennis-blue) !important;
+}
+
+.text-warning {
+    color: var(--tennis-accent) !important;
+}
+
+html { 
+    scroll-behavior: smooth; 
+}
+
+.facility-icon {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.facility-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.card-title {
+    color: var(--tennis-green);
+    font-weight: 600;
+    font-size: 1.25rem;
+}
+
+.location-text {
+    color: var(--tennis-dark-blue);
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.courts-section {
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.1), rgba(144, 238, 144, 0.1));
+    padding: 4rem 0;
+}
+
+.section-title {
+    color: var(--tennis-green);
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.tennis-navbar {
+    background: linear-gradient(135deg, var(--tennis-blue), var(--tennis-green)) !important;
+    box-shadow: 0 4px 20px rgba(135, 206, 235, 0.4);
+    padding: 1rem 0;
+}
+
+.tennis-brand {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+.tennis-brand:hover {
+    color: var(--tennis-light-green) !important;
+}
+
+.tennis-navbar .nav-link {
+    color: white !important;
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    margin: 0 0.25rem;
+}
+
+.tennis-navbar .nav-link:hover {
+    color: var(--tennis-light-green) !important;
+    transform: translateY(-2px);
+}
+
+.tennis-navbar .nav-link.active {
+    color: var(--tennis-light-green) !important;
+    font-weight: 600;
+    text-shadow: none;
+}
+
+.tennis-navbar .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.tennis-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: var(--tennis-green);
+    border-color: var(--tennis-green);
+}
+
+.btn-primary:hover {
+    background-color: var(--tennis-dark-blue);
+    border-color: var(--tennis-dark-blue);
+}
+
+.facility-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    margin: 0.1rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+}
+
+.badge-lights {
+    background-color: rgba(255, 215, 0, 0.2);
+    color: var(--tennis-accent);
+    border: 1px solid var(--tennis-accent);
+}
+
+.badge-winter {
+    background-color: rgba(135, 206, 235, 0.2);
+    color: var(--tennis-blue);
+    border: 1px solid var(--tennis-blue);
+}
+
+.badge-unavailable {
+    background-color: rgba(108, 117, 125, 0.2);
+    color: #6c757d;
+    border: 1px solid #6c757d;
+}
+
+.about-hero {
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.1), rgba(144, 238, 144, 0.1));
+    padding: 6rem 0 4rem;
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+}
+
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+.about-content h1 {
+    color: var(--tennis-green);
+    font-weight: 700;
+    margin-bottom: 2rem;
+}
+
+.about-content .lead {
+    color: var(--tennis-dark-blue);
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+
+.about-image {
+    text-align: center;
+    position: relative;
+}
+
+.tennis-heart {
+    font-size: 8rem;
+    color: var(--tennis-green);
+    opacity: 0.8;
+    animation: heartbeat 2s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.story-section {
+    padding: 2rem 0;
+    background: white;
+}
+
+.story-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(135, 206, 235, 0.1);
+    border: 2px solid rgba(135, 206, 235, 0.2);
+}
+
+.story-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    position: relative;
+    padding-left: 3rem;
+}
+
+.story-icon {
+    position: absolute;
+    left: 0;
+    top: 0.2rem;
+    font-size: 1.5rem;
+    color: var(--tennis-green);
+}
+
+.features-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, rgba(135, 206, 235, 0.05), rgba(144, 238, 144, 0.05));
+}
+
+.feature-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    height: 100%;
+    transition: all 0.3s ease;
+    border: 2px solid var(--tennis-blue);
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(34, 139, 34, 0.2);
+    border-color: var(--tennis-green);
+}
+
+.feature-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--tennis-blue), var(--tennis-green));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.feature-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.feature-card h4 {
+    color: var(--tennis-green);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.credits-section {
+    padding: 2rem 0;
+    background: white;
+}
+
+.credits-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 3rem;
+    box-shadow: 0 10px 40px rgba(135, 206, 235, 0.1);
+    border: 2px solid rgba(135, 206, 235, 0.2);
+}
+
+.credit-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.credit-logo {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--tennis-green), var(--tennis-dark-blue));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.credit-logo i {
+    font-size: 2rem;
+    color: white;
+}
+
+.credit-text h4 {
+    color: var(--tennis-green);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.credit-text p {
+    color: #555;
+    line-height: 1.7;
+    font-size: 1.1rem;
+}
+
+.dataset-link {
+    margin-top: 1.5rem;
+}
+
+.acknowledgment {
+    background: rgba(135, 206, 235, 0.1);
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    border-left: 4px solid var(--tennis-green);
+    margin-top: 2rem;
+}
+
+.acknowledgment p {
+    margin: 0;
+    font-style: italic;
+}
+
+.tennis-court-card {
+    transition: all 0.3s ease !important;
+}
+
+.tennis-court-card:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 12px 35px rgba(34, 139, 34, 0.3) !important;
+    border-color: var(--tennis-green) !important;
+}
+
+.tennis-court-card:active {
+    transform: translateY(-3px) !important;
+}
+
+.tennis-court-card .text-muted {
+    transition: color 0.3s ease;
+}
+
+.tennis-court-card:hover .text-muted {
+    color: var(--tennis-green) !important;
+}
+
+@media (max-width: 768px) {
+    .hero-banner {
+        height: 50vh;
+    }
+    
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.1rem;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .courts-section {
+        padding: 2rem 0;
+    }
+
+    .about-hero {
+        padding: 4rem 0 2rem;
+        text-align: center;
+    }
+    
+    .tennis-heart {
+        font-size: 4rem;
+        margin-top: 2rem;
+    }
+    
+    .story-card, .credits-card {
+        padding: 2rem;
+    }
+    
+    .story-content p {
+        padding-left: 2.5rem;
+        font-size: 1rem;
+    }
+    
+    .credit-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .features-section {
+        padding: 3rem 0;
+    }
+    
+    .feature-card {
+        padding: 2rem 1.5rem;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+}
