@@ -1,8 +1,6 @@
 @extends('template')
 @section('content')
-    <h3>
-        Update Student
-    </h3>
+    <h3>Update Professor</h3>
     <div class="container">
         <div class="row">
             <div class="col">
@@ -18,24 +16,24 @@
             </div>
         </div>
     </div>
-    <form action="{{ route('students.update', $student->id) }}" method="POST">
+    <form action="{{ route('professors.update', $professor->id) }}" method="POST">
         @csrf
         @method('PUT')
-        <input type="text" name="fname" value="{{ old('fname', $student->fname) }}" placeholder="First Name"><br>
+        <input type="text" name="fname" value="{{ old('fname', $professor->fname) }}" placeholder="First Name"><br>
         @error('fname')
             <span class="text-danger">{{ $message }}</span>
         @enderror
         <br>
-        <input type="text" name="lname" value="{{ old('lname', $student->lname) }}" placeholder="Last Name"><br>
+        <input type="text" name="lname" value="{{ old('lname', $professor->lname) }}" placeholder="Last Name"><br>
         @error('lname')
             <span class="text-danger">{{ $message }}</span>
         @enderror
         <br>
-        <input type="email" name="email" value="{{ old('email', $student->email) }}" placeholder="Email"><br>
+        <input type="email" name="email" value="{{ old('email', $professor->email) }}" placeholder="Email"><br>
         @error('email')
             <span class="text-danger">{{ $message }}</span>
         @enderror
         <br>
-        <input type="submit" value="Update Student">
+        <input type="submit" value="Update Professor">
     </form>
 @endsection
