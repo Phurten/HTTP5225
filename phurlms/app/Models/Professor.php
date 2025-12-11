@@ -12,4 +12,9 @@ class Professor extends Model
         'lname',
         'email',
     ];
+
+    public function course()
+    {
+        return $this->belongsTo(Course::class);
+    }
 }

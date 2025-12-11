@@ -7,6 +7,15 @@ use App\Models\Course;
 
 class CourseController extends Controller
 {
+        // public function index()
+        // {
+        //     dd(Course::all());
+        // }
+        // public function coursesByStudent($id)
+        // {
+        //     $student = Student::find($id);
+        //     dd($student -> courses());
+        // } 
     /**
      * Display a listing of the resource.
      */

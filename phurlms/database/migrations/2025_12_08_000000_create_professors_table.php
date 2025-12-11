@@ -11,6 +11,8 @@ return new class extends Migration {
             $table->string('fname');
             $table->string('lname');
             $table->string('email')->unique();
+            $table->unsignedBigInteger('course_id')->unique()->nullable();
+            $table->foreign('course_id')->references('id')->on('courses')->onDelete('set null');
             $table->timestamps();
         });
     }

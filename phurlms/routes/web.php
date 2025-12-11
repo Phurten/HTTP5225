@@ -13,3 +13,9 @@ Route::resource('students', StudentController::class);
 Route::resource('courses', CourseController::class);
 Route::resource('professors', ProfessorController::class);
 
+Route::get('courses',
+[CourseController::class, 'index'] ) -> name('courses.index');
+
+// Route::get('coursesByStudent/{id}',
+// [CourseController::class, 'coursesByStudent'] ) -> name('coursesByStudent');
+

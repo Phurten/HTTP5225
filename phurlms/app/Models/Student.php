@@ -10,4 +10,8 @@ class Student extends Model
     /** @use HasFactory<\Database\Factories\StudentFactory> */
     use HasFactory;
     protected $fillable = ['fname', 'lname', 'email'];
+
+    public function courses(){
+        return $this->belongsToMany(Course::class);
+    }
 }

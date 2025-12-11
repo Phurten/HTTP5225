@@ -30,6 +30,11 @@
             <span class="text-danger">{{ $message }}</span>
         @enderror
         <br>
+        <label for ='courses'>Select course(s)</label><br>
+        @foreach ($courses as $course)
+            <input type="checkbox" name="courses[]" value="{{ $course->id }}"> {{ $course->name }}<br>
+        @endforeach
+        <br>
         <input type="email" name="email" placeholder="Email"><br>
         @error('email')
             <span class="text-danger">{{ $message }}</span>
